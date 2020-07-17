@@ -163,26 +163,27 @@ session_start();
                 $produits = $requete->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($produits as $produit) {
-                    echo '<div class="col-lg-4">';
-                    echo '<div class="card">';
-                    echo '<img src=' . $produit['img'] . ' alt="Illustration du produit" class="img-fluid">';
-                    echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $produit['nom_produit'] . '</h5>';
-                    echo '<p class="card-text">' . $produit['description'] . '</p>';
-                    echo '<form>';
-                    echo '<div class="form-row">';
-                    echo '<div class="col-4">';
-                    echo '<input type="number" min="0" value="1" class="form-control bfh-number">';
-                    echo '</div>';
-                    echo '<div class="col-auto">';
-                    echo '<button type="submit" class="btn btn-primary mb-2">Ajouter</button>';
-                    echo '</div>';
-                                
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</form>';
+                    ?>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src='<?:$produit['img'];?>' alt="Illustration du produit" class="img-fluid">
+                            <div class="card-body">
+                                <h5 class="card-title"><?:$produit['nom_produit']?></h5>
+                                <p class="card-text"><?:$produit['description']?></p>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-4">
+                                            <input type="number" min="0" value="1" class="form-control bfh-number">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="submit" class="btn btn-primary mb-2">Ajouter</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                <?php
                 } ?>
             </div>
         </div>
