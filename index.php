@@ -166,10 +166,10 @@ session_start();
                     ?>
                     <div class="col-lg-4">
                         <div class="card">
-                            <img src='<?:$produit['img'];?>' alt="Illustration du produit" class="img-fluid">
+                            <img src='<?= $produit['img'];?>' alt="Illustration du produit" class="img-fluid">
                             <div class="card-body">
-                                <h5 class="card-title"><?:$produit['nom_produit']?></h5>
-                                <p class="card-text"><?:$produit['description']?></p>
+                                <h5 class="card-title"><?= $produit['nom_produit']?></h5>
+                                <p class="card-text"><?= $produit['description']?></p>
                                 <form>
                                     <div class="form-row">
                                         <div class="col-4">
